@@ -1,23 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import "@fontsource/roboto";
-import AppBar from "@material-ui/core/AppBar";
-import Badge from "@material-ui/core/Badge";
-import IconButton from "@material-ui/core/IconButton";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import BrushTwoToneIcon from "@material-ui/icons/BrushTwoTone";
-import ExploreIcon from "@material-ui/icons/Explore";
-import MailIcon from "@material-ui/icons/Mail";
-import MoreIcon from "@material-ui/icons/MoreVert";
+import '@fontsource/roboto';
+import AppBar from '@material-ui/core/AppBar';
+import Badge from '@material-ui/core/Badge';
+import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import BrushTwoToneIcon from '@material-ui/icons/BrushTwoTone';
+import ExploreIcon from '@material-ui/icons/Explore';
+import MailIcon from '@material-ui/icons/Mail';
+import MoreIcon from '@material-ui/icons/MoreVert';
 
-import SearchBar from "./SearchBar";
+import SearchBar from './SearchBar';
 
-import { useStyles } from "./Component_Style/Navbar.jsx";
+import { useStyles } from './Component_Style/Navbar.jsx';
 
 export default function PrimarySearchAppBar(props) {
   const classes = useStyles();
@@ -44,32 +44,32 @@ export default function PrimarySearchAppBar(props) {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = "primary-search-account-menu";
+  const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       id={menuId}
       keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMenuOpen}
       onClose={handleMenuClose}
     ></Menu>
   );
 
-  const mobileMenuId = "primary-search-account-menu-mobile";
+  const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
       classes={{ paper: classes.menu }}
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Link to="/messages" style={{ textDecoration: "none", color: "black" }}>
+      <Link to="/messages" style={{ textDecoration: 'none', color: 'black' }}>
         <MenuItem>
           <IconButton aria-label="show 4 new mails" color="inherit">
             <Badge color="secondary">
@@ -80,7 +80,7 @@ export default function PrimarySearchAppBar(props) {
         </MenuItem>
       </Link>
 
-      <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+      <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
         <MenuItem>
           <IconButton aria-label="show 11 new notifications" color="inherit">
             <ExploreIcon />
@@ -89,7 +89,7 @@ export default function PrimarySearchAppBar(props) {
         </MenuItem>
       </Link>
 
-      <Link to="/job_board" style={{ textDecoration: "none", color: "black" }}>
+      <Link to="/job_board" style={{ textDecoration: 'none', color: 'black' }}>
         <MenuItem>
           <IconButton aria-label="show 11 new notifications" color="inherit">
             <BrushTwoToneIcon />
@@ -101,7 +101,7 @@ export default function PrimarySearchAppBar(props) {
       {/* Profile Button */}
       <Link
         to={`/portfolio/${props.activeUser}`}
-        style={{ textDecoration: "none", color: "black" }}
+        style={{ textDecoration: 'none', color: 'black' }}
       >
         <MenuItem onClick={handleProfileMenuOpen}>
           <IconButton
@@ -121,11 +121,11 @@ export default function PrimarySearchAppBar(props) {
   return (
     <div className={classes.navbar_container}>
       <div className={classes.grow}>
-        <AppBar position="static" style={{ background: "#2B2C3B" }}>
+        <AppBar position="static" style={{ background: '#2B2C3B' }}>
           <Toolbar className={classes.toolbar}>
             <div className={classes.search_container}>
               {/* inkedin REACT ROUTER LINK TO INDEX */}
-              <Link to="/" style={{ textDecoration: "none", color: "#B9A1BE" }}>
+              <Link to="/" style={{ textDecoration: 'none', color: '#B9A1BE' }}>
                 <Typography className={classes.title} variant="h6" noWrap>
                   <img
                     className={classes.logo}
@@ -144,7 +144,7 @@ export default function PrimarySearchAppBar(props) {
                 {props.activeUser === 0 && (
                   <Link
                     to="/login"
-                    style={{ textDecoration: "none", color: "#B9A1BE" }}
+                    style={{ textDecoration: 'none', color: '#B9A1BE' }}
                   >
                     <IconButton aria-label="show 4 new mails" color="inherit">
                       Login
@@ -157,7 +157,7 @@ export default function PrimarySearchAppBar(props) {
                     onClick={() => {
                       props.onLogin(0);
                     }}
-                    style={{ textDecoration: "none", color: "#B9A1BE" }}
+                    style={{ textDecoration: 'none', color: '#B9A1BE' }}
                   >
                     <IconButton aria-label="show 4 new mails" color="inherit">
                       Logout
@@ -168,7 +168,7 @@ export default function PrimarySearchAppBar(props) {
                 {/* REACT ROUTER LINK TO MESSAGES */}
                 <Link
                   to="/messages"
-                  style={{ textDecoration: "none", color: "#B9A1BE" }}
+                  style={{ textDecoration: 'none', color: '#B9A1BE' }}
                 >
                   <IconButton aria-label="show 4 new mails" color="inherit">
                     <Badge color="secondary">
@@ -180,7 +180,7 @@ export default function PrimarySearchAppBar(props) {
                 {/* REACT ROUTER LINK TO SHOWCASE */}
                 <Link
                   to="/"
-                  style={{ textDecoration: "none", color: "#B9A1BE" }}
+                  style={{ textDecoration: 'none', color: '#B9A1BE' }}
                 >
                   <IconButton
                     aria-label="show 17 new notifications"
@@ -195,7 +195,7 @@ export default function PrimarySearchAppBar(props) {
                 {/* REACT ROUTER LINK TO JOBS */}
                 <Link
                   to="/job_board"
-                  style={{ textDecoration: "none", color: "#B9A1BE" }}
+                  style={{ textDecoration: 'none', color: '#B9A1BE' }}
                 >
                   <IconButton
                     aria-label="show 17 new notifications"
@@ -210,7 +210,7 @@ export default function PrimarySearchAppBar(props) {
                 {/* REACT ROUTER LINK TO PORTFOLIO */}
                 <Link
                   to={`/portfolio/${props.activeUser}`}
-                  style={{ textDecoration: "none", color: "#B9A1BE" }}
+                  style={{ textDecoration: 'none', color: '#B9A1BE' }}
                 >
                   <IconButton
                     edge="end"
@@ -228,7 +228,7 @@ export default function PrimarySearchAppBar(props) {
                   aria-haspopup="true"
                   onClick={handleMobileMenuOpen}
                   // color="inherit"
-                  style={{ color: "#B9A1BE" }}
+                  style={{ color: '#B9A1BE' }}
                 >
                   <MoreIcon />
                 </IconButton>

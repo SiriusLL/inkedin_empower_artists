@@ -1,11 +1,11 @@
-import React from "react";
-import { useHistory } from "react-router";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import { useStyles } from "./Component_Style/SearchBar.jsx";
+import React from 'react';
+import { useHistory } from 'react-router';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { useStyles } from './Component_Style/SearchBar.jsx';
 
 export default function SearchBar(props) {
-  const [searchInputValue, setSearchInputValue] = React.useState("");
+  const [searchInputValue, setSearchInputValue] = React.useState('');
   const history = useHistory();
   const classes = useStyles();
 
@@ -19,9 +19,9 @@ export default function SearchBar(props) {
           event.preventDefault();
           props.filteredSearch(searchInputValue);
           setTimeout(() => {
-            history.push("/searchResults");
+            history.push('/searchResults');
           }, 350);
-          setSearchInputValue("");
+          setSearchInputValue('');
         }}
       >
         <TextField
@@ -36,7 +36,7 @@ export default function SearchBar(props) {
             style: {
               opacity: 0.7,
               fontWeight: 600,
-              color: "lavender",
+              color: 'lavender',
             },
           }}
           data-nav-type="focal"
@@ -51,7 +51,7 @@ export default function SearchBar(props) {
           className={classes.searchButton}
         >
           <span role="img" alt="aria-label">
-            {" "}
+            {' '}
             Search 🏄
           </span>
         </Button>

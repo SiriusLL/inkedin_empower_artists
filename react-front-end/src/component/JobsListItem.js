@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useHistory } from "react-router-dom";
-import axios from "axios";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import IconButton from "@material-ui/core/IconButton";
-import { useStyles } from "./Component_Style/JobListItem.jsx";
+import React, { useEffect, useState } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import axios from 'axios';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import IconButton from '@material-ui/core/IconButton';
+import { useStyles } from './Component_Style/JobListItem.jsx';
 
 export default function Job(props) {
   let { id } = useParams();
@@ -21,11 +21,11 @@ export default function Job(props) {
       second_user_id: job.user_id,
     };
     axios.put(`/api/friends`, friend).then(() => {});
-    localStorage.setItem("activeConversation", [
+    localStorage.setItem('activeConversation', [
       friend.first_user_id,
       friend.second_user_id,
     ]);
-    history.push("/messages");
+    history.push('/messages');
   };
 
   const [job, setJob] = useState({});

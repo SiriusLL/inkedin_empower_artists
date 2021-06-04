@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Login(props) {
   const [user, setUser] = useState();
@@ -17,7 +17,7 @@ export default function Login(props) {
         onClick={() => {
           props.onLogin(user);
         }}
-        style={{ textDecoration: "none", color: "lavender" }}
+        style={{ textDecoration: 'none', color: 'lavender' }}
       >
         <button>Login</button>
       </Link>

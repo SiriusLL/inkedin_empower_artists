@@ -1,40 +1,40 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // import FormControlLabel from "@material-ui/core/FormControlLabel"; if needed for future use
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import { useStyles } from "./Component_Style/Form.jsx";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import { useStyles } from './Component_Style/Form.jsx';
 
 export default function BasicTextFields(props) {
   const classes = useStyles();
 
   const [state, setState] = useState({
     id: props.activeUser,
-    title: "",
-    description: "",
-    imgLink: "",
-    projectLink: "",
+    title: '',
+    description: '',
+    imgLink: '',
+    projectLink: '',
     forSale: false,
     price: undefined,
     titleError: false,
     imageError: false,
-    imageErrorMessage: "",
+    imageErrorMessage: '',
   });
 
   const validate = () => {
     const invalid = {
       titleError: false,
       imageError: false,
-      imageErrorMessage: "",
+      imageErrorMessage: '',
     };
-    state.title === ""
+    state.title === ''
       ? (invalid.titleError = true)
       : (invalid.titleError = false);
-    state.imgLink === ""
+    state.imgLink === ''
       ? (invalid.imageError = true)
       : (invalid.imageError = false);
-    state.imgLink === ""
-      ? (invalid.imageErrorMessage = "Cannot be blank")
-      : (invalid.imageErrorMessage = "");
+    state.imgLink === ''
+      ? (invalid.imageErrorMessage = 'Cannot be blank')
+      : (invalid.imageErrorMessage = '');
     if (invalid.titleError || invalid.imageError) {
       setState({
         ...state,

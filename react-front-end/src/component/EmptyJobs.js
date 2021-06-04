@@ -1,6 +1,6 @@
-import React from "react";
-import { useStyles } from "./Component_Style/EmptyJobs.jsx";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import React from 'react';
+import { useStyles } from './Component_Style/EmptyJobs.jsx';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const EmptyJobs = (props) => {
   const classes = useStyles();

@@ -1,21 +1,21 @@
-import axios from "axios";
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import axios from 'axios';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
-import EmptyJobs from "./EmptyJobs";
-import FormJobs from "./FormJobs";
-import MyJobsList from "./MyJobsList";
+import EmptyJobs from './EmptyJobs';
+import FormJobs from './FormJobs';
+import MyJobsList from './MyJobsList';
 
-import useApplicationData from "../hooks/useApplicationData";
+import useApplicationData from '../hooks/useApplicationData';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -29,7 +29,7 @@ const StyledTableCell = withStyles((theme) => ({
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    "&:nth-of-type(odd)": {
+    '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
     },
   },
@@ -37,23 +37,23 @@ const StyledTableRow = withStyles((theme) => ({
 
 const useStyles = makeStyles({
   header: {
-    color: "lavender",
+    color: 'lavender',
   },
   table: {
     minWidth: 700,
   },
   titleRowText: {
-    fontWeight: "900",
-    fontSize: "18px",
-    color: "lavender",
+    fontWeight: '900',
+    fontSize: '18px',
+    color: 'lavender',
     // textDecoration: "underline",
   },
   titleRow: {
     //border: "1px solid grey",
   },
   tableContainer: {
-    marginLeft: "3%",
-    marginRight: "3%",
+    marginLeft: '3%',
+    marginRight: '3%',
   },
 });
 

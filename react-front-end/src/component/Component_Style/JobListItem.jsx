@@ -1,23 +1,23 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   rootContainer: {
-    marginTop: "60px",
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
+    marginTop: '60px',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   root: {
     minWidth: 275,
-    maxWidth: "100%",
-    margin: "20px",
-    background: "lavender",
+    maxWidth: '100%',
+    margin: '20px',
+    background: 'lavender',
   },
   bullet: {
-    display: "inline-block",
-    margin: "0 4px",
-    transform: "scale(0.8)",
+    display: 'inline-block',
+    margin: '0 4px',
+    transform: 'scale(0.8)',
   },
   title: {
     fontSize: 14,
@@ -26,15 +26,15 @@ const useStyles = makeStyles({
     marginBottom: 16,
   },
   contactContainer: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   contactButton: {
-    padding: "10px",
-    "&:hover": {
-      color: "green",
-      transform: "scale(1.1)",
+    padding: '10px',
+    '&:hover': {
+      color: 'green',
+      transform: 'scale(1.1)',
     },
   },
 });

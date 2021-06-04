@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import LazyHero from "react-lazy-hero";
+import LazyHero from 'react-lazy-hero';
 // import { makeStyles } from "@material-ui/core/styles";
 // import Card from "@material-ui/core/Card";
 // import CardActionArea from "@material-ui/core/CardActionArea";

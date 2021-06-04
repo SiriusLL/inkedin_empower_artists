@@ -1,18 +1,18 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 550,
-    height: "auto",
-    transition: "transform .2s" /* Animation */,
-    display: "flex",
-    flexDirection: "column",
+    height: 'auto',
+    transition: 'transform .2s' /* Animation */,
+    display: 'flex',
+    flexDirection: 'column',
     // alignItems: "center",
     // justifyContent: "center",
 
-    "&:hover": {
+    '&:hover': {
       opacity: 0.8,
-      transform: "scale(1.03)",
+      transform: 'scale(1.03)',
       // background: "#C9A1BE",
       // "z-index": "9999",
     },
@@ -22,23 +22,23 @@ const useStyles = makeStyles({
     height: 350,
   },
   text: {
-    width: "100%",
-    height: "100%",
-    color: "white",
+    width: '100%',
+    height: '100%',
+    color: 'white',
     fontSize: 40,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    textAlign: 'center',
     opacity: 0,
-    alignSelf: "center",
-    justifySelf: "center",
-    paddingTop: "40%",
+    alignSelf: 'center',
+    justifySelf: 'center',
+    paddingTop: '40%',
     // border: "1px solid red",
 
-    "&:hover": {
-      background: "black",
+    '&:hover': {
+      background: 'black',
       opacity: 0.7,
     },
   },
@@ -46,17 +46,17 @@ const useStyles = makeStyles({
     fontSize: 27,
   },
   editDeleteButtons: {
-    minWidth: "5px",
-    Width: "10px",
+    minWidth: '5px',
+    Width: '10px',
   },
   deleteButton: {
-    "&:hover": {
-      color: "red",
+    '&:hover': {
+      color: 'red',
     },
   },
   editButton: {
-    "&:hover": {
-      color: "green",
+    '&:hover': {
+      color: 'green',
     },
   },
 });

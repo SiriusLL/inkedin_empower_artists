@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   rootLeftButton: {
@@ -6,39 +6,39 @@ const useStyles = makeStyles((theme) => ({
   },
   mediaLeftButton: {
     height: 0,
-    paddingTop: "56.25%", // 16:9
+    paddingTop: '56.25%', // 16:9
   },
   expandLeftButton: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
   root: {
-    maxWidth: "550",
-    height: "auto",
-    "&:hover": {
+    maxWidth: '550',
+    height: 'auto',
+    '&:hover': {
       opacity: 0.9,
     },
-    background: "lavender",
-    borderRadius: "0.9%",
+    background: 'lavender',
+    borderRadius: '0.9%',
   },
   media: {
     height: 350,
   },
   container: {
-    width: "100%",
-    paddingLeft: "50px",
-    paddingRight: "50px",
-    paddingTop: "50px",
+    width: '100%',
+    paddingLeft: '50px',
+    paddingRight: '50px',
+    paddingTop: '50px',
   },
   usernameAndButtonContainer: {
-    display: "flex",
-    flexDirection: "Row",
-    justifyContent: "space-between",
-    paddingTop: "2px",
-    paddingBottom: "0px",
+    display: 'flex',
+    flexDirection: 'Row',
+    justifyContent: 'space-between',
+    paddingTop: '2px',
+    paddingBottom: '0px',
     // alignContent: "space-between",
   },
   username: {

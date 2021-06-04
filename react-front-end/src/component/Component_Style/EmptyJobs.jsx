@@ -1,13 +1,13 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   buttonContainer: {
-    padding: "10px",
+    padding: '10px',
   },
   button: {
-    width: "7%",
-    height: "auto",
-    color: "lavender",
+    width: '7%',
+    height: 'auto',
+    color: 'lavender',
   },
 });
 

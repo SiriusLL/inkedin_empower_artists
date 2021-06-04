@@ -1,4 +1,4 @@
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   table: {
@@ -8,18 +8,18 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   paper: {
-    textAlign: "center",
+    textAlign: 'center',
   },
   gridContainer: {
-    paddingLeft: "50px",
-    paddingRight: "50px",
-    paddingTop: "50px",
+    paddingLeft: '50px',
+    paddingRight: '50px',
+    paddingTop: '50px',
   },
   page_container: {
-    paddingTop: "80px",
+    paddingTop: '80px',
   },
   page_titles: {
-    color: "white",
+    color: 'white',
   },
 });
 

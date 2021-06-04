@@ -1,12 +1,12 @@
-import axios from "axios";
-import { useReducer, useEffect } from "react";
+import axios from 'axios';
+import { useReducer, useEffect } from 'react';
 
 export default function useApplicationData() {
-  const SET_APPLICATION_DATA = "SET_APPLICATION_DATA";
-  const SET_JOBS = "SET_JOBS";
-  const SET_ACTIVE_USER = "SET_ACTIVE_USER";
-  const SET_ACTIVE_USER_JOBS = "SET_ACTIVE_USER_JOBS";
-  const SET_FRIENDS = "SET_FRIENDS";
+  const SET_APPLICATION_DATA = 'SET_APPLICATION_DATA';
+  const SET_JOBS = 'SET_JOBS';
+  const SET_ACTIVE_USER = 'SET_ACTIVE_USER';
+  const SET_ACTIVE_USER_JOBS = 'SET_ACTIVE_USER_JOBS';
+  const SET_FRIENDS = 'SET_FRIENDS';
 
   const reducer = (state, action) => {
     const actions = {
@@ -64,7 +64,7 @@ export default function useApplicationData() {
         data: { friends: all[1].data.friends },
       });
     });
-    localStorage.setItem("User", userID);
+    localStorage.setItem('User', userID);
   };
 
   const setJobs = () => {
@@ -97,7 +97,7 @@ export default function useApplicationData() {
   };
 
   const checkLoggedIn = () => {
-    const userLogin = localStorage.getItem("User");
+    const userLogin = localStorage.getItem('User');
     if (userLogin) {
       const userFound = JSON.parse(userLogin);
       setActiveUser(userFound);

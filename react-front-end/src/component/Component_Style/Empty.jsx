@@ -1,18 +1,18 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   buttonContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
   },
   button: {
-    width: "20%",
-    height: "auto",
-    color: "lavender",
+    width: '20%',
+    height: 'auto',
+    color: 'lavender',
     // color: "#B9A1BE",
   },
 });

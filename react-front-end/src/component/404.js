@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
-import { useStyles } from "./Component_Style/404";
+import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { useStyles } from './Component_Style/404';
 
 export default function ErrorPage() {
   const classes = useStyles();

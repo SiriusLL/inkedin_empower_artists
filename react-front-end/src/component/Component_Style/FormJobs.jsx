@@ -1,21 +1,21 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      "& > *": {
+      '& > *': {
         // margin: theme.spacing(1),
         // width: "25ch",
-        size: "small",
+        size: 'small',
         borderRadius: theme.shape.borderRadius,
-        backgroundColor: "white",
-        "&:hover": {
-          backgroundColor: "lavender",
+        backgroundColor: 'white',
+        '&:hover': {
+          backgroundColor: 'lavender',
         },
       },
-      background: "white",
-      marginBottom: "4%",
-      paddingBottom: "2%",
+      background: 'white',
+      marginBottom: '4%',
+      paddingBottom: '2%',
     },
     margin: {
       margin: theme.spacing(1),
@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(3),
     },
     textField: {
-      width: "25ch",
+      width: '25ch',
     },
     cancel_job: {
-      background: "red",
+      background: 'red',
     },
   })
 );

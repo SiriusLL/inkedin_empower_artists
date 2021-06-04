@@ -1,30 +1,30 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
   deleteButton: {
-    "&:hover": {
-      color: "red",
+    '&:hover': {
+      color: 'red',
     },
   },
   editButton: {
-    "&:hover": {
-      color: "green",
+    '&:hover': {
+      color: 'green',
     },
   },
   titleRowText: {
-    fontWeight: "900",
-    fontSize: "18px",
-    textDecoration: "underline",
+    fontWeight: '900',
+    fontSize: '18px',
+    textDecoration: 'underline',
   },
   titleRow: {
     // border: "1px solid grey",
   },
   tableContainer: {
-    marginLeft: "3%",
-    marginRight: "3%",
+    marginLeft: '3%',
+    marginRight: '3%',
   },
 });
 

@@ -1,28 +1,28 @@
-import React, { createContext } from "react";
-import "./App.css";
-import "@fontsource/roboto";
+import React, { createContext } from 'react';
+import './App.css';
+import '@fontsource/roboto';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import User from "./component/User";
-import Artworks from "./component/Artworks";
-import Artpiece from "./component/Artpiece";
-import JobsList from "./component/JobsList";
-import JobsListItem from "./component/JobsListItem";
-import PrimarySearchAppBar from "./component/Navbar";
-import Messenger from "./component/Messenger/Messenger";
-import Login from "./component/Login";
-import Hero from "./component/Hero";
+import User from './component/User';
+import Artworks from './component/Artworks';
+import Artpiece from './component/Artpiece';
+import JobsList from './component/JobsList';
+import JobsListItem from './component/JobsListItem';
+import PrimarySearchAppBar from './component/Navbar';
+import Messenger from './component/Messenger/Messenger';
+import Login from './component/Login';
+import Hero from './component/Hero';
 
-import useApplicationData from "./hooks/useApplicationData";
-import SearchResults from "./component/SearchResults";
-import axios from "axios";
+import useApplicationData from './hooks/useApplicationData';
+import SearchResults from './component/SearchResults';
+import axios from 'axios';
 
-import ErrorPage from "./component/404";
+import ErrorPage from './component/404';
 
 export const JobsContext = createContext([]);
 
@@ -39,7 +39,7 @@ export default function App() {
   const filteredSearch = (queryString) => {
     axios.get(`/api/search?query=${queryString}`).then((response) => {
       setSearchReturnValue(response.data);
-      localStorage.setItem("search_results", JSON.stringify(response.data));
+      localStorage.setItem('search_results', JSON.stringify(response.data));
     });
   };
 

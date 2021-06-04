@@ -1,13 +1,13 @@
-import { red } from "@material-ui/core/colors";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { red } from '@material-ui/core/colors';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      "& > *": {
+      '& > *': {
         margin: theme.spacing(1),
-        width: "25ch",
-        size: "small",
+        width: '25ch',
+        size: 'small',
       },
     },
 
@@ -19,23 +19,23 @@ const useStyles = makeStyles((theme: Theme) =>
     //     color: "red",
     //   },
     textField: {
-      border: "1px solid #B9A1BE",
+      border: '1px solid #B9A1BE',
       borderRadius: theme.shape.borderRadius,
-      color: "#red",
+      color: '#red',
       placeholer_text: {
-        color: "red",
+        color: 'red',
       },
     },
     searchButton: {
-      width: "20ch",
-      padding: "8px",
-      border: "1px solid #B9A1BE",
-      color: "#B9A1BE",
+      width: '20ch',
+      padding: '8px',
+      border: '1px solid #B9A1BE',
+      color: '#B9A1BE',
     },
     searchField: {
-      color: "white",
-      "::placeholder": {
-        color: "red",
+      color: 'white',
+      '::placeholder': {
+        color: 'red',
       },
     },
   })

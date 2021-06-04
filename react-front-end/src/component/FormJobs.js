@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import TextField from "@material-ui/core/TextField";
-import clsx from "clsx";
-import { useStyles } from "./Component_Style/FormJobs.jsx";
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from '@material-ui/core/TextField';
+import clsx from 'clsx';
+import { useStyles } from './Component_Style/FormJobs.jsx';
 
 export default function FormJobs(props) {
   const classes = useStyles();
 
   const [state, setState] = useState({
     id: props.activeUser,
-    title: "",
-    description: "",
+    title: '',
+    description: '',
     pay: 0,
-    company: "",
-    location: "",
+    company: '',
+    location: '',
   });
 
   return (
@@ -122,7 +122,7 @@ export default function FormJobs(props) {
         type="submit"
         value="Submit"
         variant="contained"
-        style={{ background: "#00007f", color: "lavender", fontWeight: 900 }}
+        style={{ background: '#00007f', color: 'lavender', fontWeight: 900 }}
         onClick={() => props.onSubmit(state)}
       >
         Submit
@@ -138,7 +138,7 @@ export default function FormJobs(props) {
         type="button"
         value="Cancel"
         variant="contained"
-        style={{ background: "#6d0323", color: "lavender", fontWeight: 900 }}
+        style={{ background: '#6d0323', color: 'lavender', fontWeight: 900 }}
         onClick={() => props.onCancel()}
       >
         Cancel

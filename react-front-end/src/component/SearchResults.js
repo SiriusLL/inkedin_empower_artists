@@ -1,23 +1,23 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 // Artworks
-import Artwork from "./Artwork";
-import Grid from "@material-ui/core/Grid";
+import Artwork from './Artwork';
+import Grid from '@material-ui/core/Grid';
 // Users
-import ProfilePic from "./ProfilePic";
+import ProfilePic from './ProfilePic';
 // Jobs table
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 // import { useStyles } from "./Component_Style/SearchResults.jsx";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 const SearchResults = (props) => {
-  const storage = JSON.parse(localStorage.getItem("search_results"));
+  const storage = JSON.parse(localStorage.getItem('search_results'));
 
   const useStyles = makeStyles({
     table: {
@@ -27,20 +27,20 @@ const SearchResults = (props) => {
       flexGrow: 1,
     },
     paper: {
-      textAlign: "center",
+      textAlign: 'center',
     },
     gridContainer: {
       // paddingLeft: "50px",
       // paddingRight: "50px",
       // paddingTop: "50px",
-      paddingBottom: "50px",
+      paddingBottom: '50px',
     },
     page_container: {
-      paddingTop: "50px",
-      margin: "3%",
+      paddingTop: '50px',
+      margin: '3%',
     },
     page_titles: {
-      color: "#B9A1BE",
+      color: '#B9A1BE',
     },
     table_container: {
       // marginLeft: "3%",
@@ -60,7 +60,7 @@ const SearchResults = (props) => {
 
   const StyledTableRow = withStyles((theme) => ({
     root: {
-      "&:nth-of-type(odd)": {
+      '&:nth-of-type(odd)': {
         backgroundColor: theme.palette.action.hover,
       },
     },
@@ -172,11 +172,11 @@ const SearchResults = (props) => {
 
   return (
     <div className={classes.page_container}>
-      <h1 className={classes.page_titles}>{storage && "Art!"}</h1>
+      <h1 className={classes.page_titles}>{storage && 'Art!'}</h1>
       <div>{storage && artworks()}</div>
-      <h1 className={classes.page_titles}>{storage && "People!"}</h1>
+      <h1 className={classes.page_titles}>{storage && 'People!'}</h1>
       <div>{storage && users()}</div>
-      <h1 className={classes.page_titles}>{storage && "Jobs!"}</h1>
+      <h1 className={classes.page_titles}>{storage && 'Jobs!'}</h1>
       <div>{storage && jobs()}</div>
     </div>
   );

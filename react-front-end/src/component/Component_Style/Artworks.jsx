@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -6,14 +6,14 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(1),
-    textAlign: "center",
+    textAlign: 'center',
     color: theme.palette.text.secondary,
   },
   gridContainer: {
-    paddingLeft: "3%",
-    paddingRight: "3%",
-    paddingTop: "50px",
-    marginBottom: "50px",
+    paddingLeft: '3%',
+    paddingRight: '3%',
+    paddingTop: '50px',
+    marginBottom: '50px',
   },
 }));
 

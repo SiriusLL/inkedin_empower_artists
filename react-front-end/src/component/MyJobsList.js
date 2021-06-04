@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import { Link } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
-import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
-import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
-import IconButton from "@material-ui/core/IconButton";
+import React, { useEffect } from 'react';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import { Link } from 'react-router-dom';
+import Paper from '@material-ui/core/Paper';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+import IconButton from '@material-ui/core/IconButton';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -24,7 +24,7 @@ const StyledTableCell = withStyles((theme) => ({
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    "&:nth-of-type(odd)": {
+    '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
     },
   },
@@ -32,35 +32,35 @@ const StyledTableRow = withStyles((theme) => ({
 
 const useStyles = makeStyles({
   header: {
-    color: "lavender",
+    color: 'lavender',
   },
   table: {
     minWidth: 700,
   },
   titleRowText: {
-    fontWeight: "900",
-    fontSize: "18px",
-    color: "lavender",
+    fontWeight: '900',
+    fontSize: '18px',
+    color: 'lavender',
     // textDecoration: "underline",
   },
   titleRow: {
     //border: "1px solid grey",
   },
   deleteButton: {
-    "&:hover": {
-      color: "red",
+    '&:hover': {
+      color: 'red',
     },
   },
   editButton: {
-    "&:hover": {
-      color: "green",
+    '&:hover': {
+      color: 'green',
     },
   },
   editDeleteRow: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });
 
@@ -103,7 +103,7 @@ export default function BasicTable(props) {
                   <StyledTableCell component="th" scope="row">
                     <Link
                       to={`/jobs/${row.id}`}
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{ textDecoration: 'none', color: 'black' }}
                     >
                       {row.title}
                     </Link>

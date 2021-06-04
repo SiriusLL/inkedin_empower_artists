@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import Artworks from "./Artworks";
-import Form from "./Form";
-import ProfilePic from "./ProfilePic";
-import Empty from "./Empty";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import { useStyles } from "./Component_Style/User.jsx";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import Artworks from './Artworks';
+import Form from './Form';
+import ProfilePic from './ProfilePic';
+import Empty from './Empty';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { useStyles } from './Component_Style/User.jsx';
 
 export default function User(props) {
   const [state, setState] = useState({
@@ -121,7 +121,7 @@ export default function User(props) {
                 onCreate={onCreate}
                 onCancel={onCancel}
                 activeUser={props.activeUser}
-                formHeader={"Add"}
+                formHeader={'Add'}
               />
             )}
             {state.showEdit && (
@@ -129,7 +129,7 @@ export default function User(props) {
                 onCreate={onEditSubmit}
                 onCancel={onCancel}
                 activeUser={props.activeUser}
-                formHeader={"Edit"}
+                formHeader={'Edit'}
               />
             )}
           </Grid>

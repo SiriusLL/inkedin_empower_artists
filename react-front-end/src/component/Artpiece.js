@@ -1,24 +1,24 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import clsx from 'clsx';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 //import Collapse from "@material-ui/core/Collapse";
 //import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
 //import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ShareIcon from '@material-ui/icons/Share';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 //import MoreVertIcon from "@material-ui/icons/MoreVert";
 //import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
-import PermIdentityIcon from "@material-ui/icons/PermIdentity";
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 
-import { useStyles } from "./Component_Style/Artpiece";
+import { useStyles } from './Component_Style/Artpiece';
 
 export default function RecipeReviewCard(props) {
   const classes = useStyles();
@@ -30,7 +30,7 @@ export default function RecipeReviewCard(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  console.log("AP props :::", props);
+  console.log('AP props :::', props);
 
   useEffect(() => {
     axios.get(`/api/artworks/${id}`).then((res) => {

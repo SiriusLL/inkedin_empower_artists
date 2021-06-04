@@ -1,16 +1,16 @@
-const Express = require("express");
+const Express = require('express');
 const App = Express();
-const BodyParser = require("body-parser");
+const BodyParser = require('body-parser');
 // const PORT = 8080;
 const PORT = 3003;
-const db = require("./lib/db");
+const db = require('./lib/db');
 
 // Express Configuration
 App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
-App.use(Express.static("public"));
+App.use(Express.static('public'));
 
-App.get("/api/search", (req, res) => {
+App.get('/api/search', (req, res) => {
   const searchItem = req.query.query;
   Promise.all([
     db.query(
@@ -21,15 +21,15 @@ App.get("/api/search", (req, res) => {
       // JOIN artworks ON users.id = author_id
       // ORDER BY artworks.id DESC;
       // `
-      ["%" + searchItem.toLowerCase() + "%"]
+      ['%' + searchItem.toLowerCase() + '%']
     ),
     db.query(
       `SELECT *, users.id as user_id FROM users WHERE LOWER(username) LIKE $1`,
-      ["%" + searchItem.toLowerCase() + "%"]
+      ['%' + searchItem.toLowerCase() + '%']
     ),
     db.query(
       `SELECT * FROM jobs WHERE LOWER(title) LIKE $1 OR LOWER(description) LIKE $1 OR LOWER(location) LIKE $1 OR LOWER(company) LIKE $1`,
-      ["%" + searchItem.toLowerCase() + "%"]
+      ['%' + searchItem.toLowerCase() + '%']
     ),
   ]).then((all) => {
     res.json({
@@ -42,8 +42,8 @@ App.get("/api/search", (req, res) => {
 
 // ------------------------------------- USERS
 
-App.get("/api/users", (req, res) => {
-  const data = db.query("SELECT * FROM users").then((response) => {
+App.get('/api/users', (req, res) => {
+  const data = db.query('SELECT * FROM users').then((response) => {
     res.json({
       users: response.rows,
     });
@@ -51,7 +51,7 @@ App.get("/api/users", (req, res) => {
 });
 
 // THIS GETS A USERs ARTWORKS
-App.get("/api/users/:id/artworks", (req, res) => {
+App.get('/api/users/:id/artworks', (req, res) => {
   const data = db
     .query(
       `
@@ -71,7 +71,7 @@ App.get("/api/users/:id/artworks", (req, res) => {
 });
 
 // THIS GETS A USERs JOBS
-App.get("/api/users/:id/jobs", (req, res) => {
+App.get('/api/users/:id/jobs', (req, res) => {
   const data = db
     .query(
       `
@@ -92,7 +92,7 @@ App.get("/api/users/:id/jobs", (req, res) => {
 
 // ------------------------------------- ARTWORKS
 
-App.get("/api/artworks", (req, res) => {
+App.get('/api/artworks', (req, res) => {
   const data = db
     .query(
       `
@@ -109,7 +109,7 @@ App.get("/api/artworks", (req, res) => {
     });
 });
 
-App.get("/api/artworks/:id", (req, res) => {
+App.get('/api/artworks/:id', (req, res) => {
   const { id } = req.params;
   const data = db
     .query(
@@ -128,7 +128,7 @@ App.get("/api/artworks/:id", (req, res) => {
     });
 });
 
-App.put("/api/artworks", (req, res) => {
+App.put('/api/artworks', (req, res) => {
   const { id, title, imgLink, projectLink, description, forSale, price } =
     req.body;
   const data = db
@@ -144,7 +144,7 @@ App.put("/api/artworks", (req, res) => {
 });
 
 // THIS EDITS A ARTWORK
-App.put("/api/artworks/:art_id", (req, res) => {
+App.put('/api/artworks/:art_id', (req, res) => {
   const { id, title, imgLink, projectLink, description, forSale, price } =
     req.body;
   const data = db
@@ -170,7 +170,7 @@ App.put("/api/artworks/:art_id", (req, res) => {
     });
 });
 
-App.delete("/api/artworks/:id", (req, res) => {
+App.delete('/api/artworks/:id', (req, res) => {
   const { id } = req.params;
   const data = db
     .query(`DELETE FROM artworks WHERE id = $1;`, [id])
@@ -183,7 +183,7 @@ App.delete("/api/artworks/:id", (req, res) => {
 
 // ------------------------------------- FRIENDS
 
-App.get("/api/friends/:id", (req, res) => {
+App.get('/api/friends/:id', (req, res) => {
   // const data = db.query("SELECT * FROM friends WHERE sender_id = $1 OR receiver_id = $1",[req.params.id]).then((response) => {
   const data = db
     .query(
@@ -210,7 +210,7 @@ App.get("/api/friends/:id", (req, res) => {
     });
 });
 
-App.put("/api/friends/", (req, res) => {
+App.put('/api/friends/', (req, res) => {
   const { first_user_id, second_user_id } = req.body;
   const data = db
     .query(
@@ -235,7 +235,7 @@ App.put("/api/friends/", (req, res) => {
 
 // ------------------------------------- JOBS
 
-App.get("/api/jobs", (req, res) => {
+App.get('/api/jobs', (req, res) => {
   const data = db
     .query(
       `SELECT jobs.id AS id, user_id, username, title, description, pay, company, location 
@@ -250,7 +250,7 @@ App.get("/api/jobs", (req, res) => {
     });
 });
 
-App.get("/api/jobs/:id", (req, res) => {
+App.get('/api/jobs/:id', (req, res) => {
   const data = db
     .query(
       `
@@ -267,7 +267,7 @@ App.get("/api/jobs/:id", (req, res) => {
     });
 });
 
-App.put("/api/jobs", (req, res) => {
+App.put('/api/jobs', (req, res) => {
   const { title, description, pay, company, location, id } = req.body;
   const data = db
     .query(
@@ -282,7 +282,7 @@ App.put("/api/jobs", (req, res) => {
 });
 
 // THIS EDITS A JOB
-App.put("/api/jobs/:job_id", (req, res) => {
+App.put('/api/jobs/:job_id', (req, res) => {
   const { title, description, pay, company, location, id } = req.body;
   const data = db
     .query(
@@ -299,7 +299,7 @@ App.put("/api/jobs/:job_id", (req, res) => {
 });
 
 // THIS DELETES A JOB
-App.delete("/api/jobs/:id", (req, res) => {
+App.delete('/api/jobs/:id', (req, res) => {
   const { id } = req.params;
   const data = db
     .query(`DELETE FROM jobs WHERE id = $1;`, [id])
@@ -312,10 +312,10 @@ App.delete("/api/jobs/:id", (req, res) => {
 
 // ------------------------------------- MESSAGES
 
-App.get("/api/messages/:first_id/:second_id", (req, res) => {
+App.get('/api/messages/:first_id/:second_id', (req, res) => {
   const data = db
     .query(
-      "SELECT * FROM messages WHERE (sender_id = $1 AND receiver_id = $2) OR (sender_id = $2 AND receiver_id = $1)",
+      'SELECT * FROM messages WHERE (sender_id = $1 AND receiver_id = $2) OR (sender_id = $2 AND receiver_id = $1)',
       [req.params.first_id, req.params.second_id]
     )
     .then((response) => {
@@ -325,7 +325,7 @@ App.get("/api/messages/:first_id/:second_id", (req, res) => {
     });
 });
 
-App.put("/api/messages", (req, res) => {
+App.put('/api/messages', (req, res) => {
   const { sender_id, receiver_id, message } = req.body;
   const data = db
     .query(
